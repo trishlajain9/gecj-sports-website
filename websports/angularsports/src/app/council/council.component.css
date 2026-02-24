@@ -1,0 +1,13 @@
+.council-view {
+  min-height: 100vh;
+  padding: 92px 16px 24px; /* top padding for fixed navbar */
+  background: linear-gradient(180deg, #0a1224, #171f33);
+  color: #fff;
+}
+
+.toolbar { max-width: 1200px; margin: 0 auto 12px; }
+.back-link { color: #93c5fd; text-decoration: none; font-weight: 700; }
+.back-link:hover { text-decoration: underline; }
+
+.img-wrap { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; }
+.img-wrap img { width: 100%; max-width: 1000px; height: auto; border-radius: 16px; box-shadow: 0 12px 48px rgba(0,0,0,0.45); }

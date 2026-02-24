@@ -1,0 +1,139 @@
+/* Admin form */
+.timeline-admin-form { margin: 1rem auto 2rem auto; max-width: 900px; }
+.timeline-admin-btns { margin-top: 0.5rem; }
+
+/* Viewport with white background */
+.timeline-viewport {
+	min-height: 100vh;
+	padding: 2.5rem 1rem 4rem 1rem;
+	background: #17213a;
+}
+
+.timeline-title {
+	text-align: center;
+	font-size: 2.2rem;
+	color: #73b9f2;
+	font-weight: 900;
+	margin-bottom: 2rem;
+}
+
+.timeline {
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.center-line {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	width: 3px;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+}
+
+.date-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: #73b9f2;
+	color: #fff;
+	font-weight: 800;
+	border-radius: 999px;
+	padding: 0.6rem 1.3rem;
+	margin: 2rem auto 1.5rem auto;
+	border: none;
+	box-shadow: 0 4px 12px rgba(115, 185, 242, 0.3);
+}
+.badge-icon { font-size: 1.1rem; }
+
+/* Zig-zag timeline layout */
+.timeline-item {
+	position: relative;
+	width: 50%;
+	padding: 1rem 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.timeline-item.left {
+	left: 0;
+	text-align: right;
+}
+
+.timeline-item.right {
+	left: 50%;
+	text-align: left;
+}
+
+/* Timeline dots */
+.timeline-dot {
+	position: absolute;
+	top: 1.5rem;
+	width: 20px;
+	height: 20px;
+	background: #73b9f2;
+	border: 4px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(115, 185, 242, 0.4);
+	z-index: 2;
+}
+
+.timeline-item.left .timeline-dot {
+	right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+	left: -10px;
+}
+
+/* Event cards */
+.event-card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+	padding: 1.2rem 1.5rem;
+	position: relative;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 28px rgba(115, 185, 242, 0.25);
+}
+
+.event-time {
+	font-size: 0.9rem;
+	color: #73b9f2;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.event-title {
+	font-weight: 800;
+	font-size: 1.1rem;
+	color: #222;
+	margin-bottom: 0.5rem;
+}
+
+.event-desc { 
+	color: #555; 
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+	.center-line { display: none; }
+	
+	.timeline-item {
+		width: 100%;
+		left: 0 !important;
+		text-align: left;
+		padding: 1rem 0 1rem 2rem;
+	}
+	
+	.timeline-item .timeline-dot {
+		left: -10px;
+		right: auto;
+	}
+}

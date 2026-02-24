@@ -1,0 +1,23 @@
+<section class="gallery-hero">
+  <h1>Gallery</h1>
+  <p>Explore event photos by batch.</p>
+  </section>
+
+<section class="batches">
+  <div class="batch-card" *ngFor="let b of batches; trackBy: trackByBatch">
+    <button class="batch-header" (click)="toggleBatch(b.id)" [attr.aria-expanded]="activeBatchId === b.id">
+      <div class="left">
+        <h3>{{ b.title }}</h3>
+        <span class="year">{{ b.yearRange }}</span>
+      </div>
+      <div class="right">{{ activeBatchId === b.id ? 'Hide Photos' : 'View Photos' }}</div>
+    </button>
+    <p class="desc" *ngIf="b.description">{{ b.description }}</p>
+
+    <div class="photos" *ngIf="activeBatchId === b.id">
+      <div class="photo" *ngFor="let p of b.photos; trackBy: trackByPhoto">
+        <img [src]="p.src" [attr.alt]="p.alt" [attr.title]="p.alt" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

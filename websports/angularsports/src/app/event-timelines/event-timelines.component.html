@@ -1,0 +1,50 @@
+
+<div class="timeline-viewport">
+	<h2 class="timeline-title">Events Timeline</h2>
+
+	<div *ngIf="isAdmin" class="timeline-admin-form">
+		<form (ngSubmit)="addTimeline()">
+			<label>
+				Title:
+				<input [(ngModel)]="newTimeline.title" name="title" placeholder="Title" required />
+			</label>
+			<label>
+				Date (YYYY-MM-DD):
+				<input [(ngModel)]="newTimeline.date" name="date" placeholder="2025-09-01" required />
+			</label>
+			<label>
+				Time (HH:MM):
+				<input [(ngModel)]="newTimeline.time" name="time" placeholder="14:30" />
+			</label>
+			<label>
+				Description:
+				<input [(ngModel)]="newTimeline.description" name="description" placeholder="Description" />
+			</label>
+			<button type="submit">Add Timeline</button>
+		</form>
+	</div>
+
+	<div class="timeline">
+		<div class="center-line"></div>
+		<ng-container *ngFor="let date of groupedDates; trackBy: trackByDate">
+			<div class="date-badge">
+				<span class="badge-icon">🗓️</span>
+				<span class="badge-text">{{ date }}</span>
+			</div>
+			<ng-container *ngFor="let ev of groupedMap[date]; let i = index; trackBy: trackByEvent">
+				<div class="timeline-item" [class.left]="i % 2 === 0" [class.right]="i % 2 === 1">
+					<div class="timeline-dot"></div>
+					<div class="event-card">
+						<div class="event-time" *ngIf="ev.time">⏰ {{ ev.time }}</div>
+						<div class="event-title">{{ ev.title }}</div>
+						<div class="event-desc" *ngIf="ev.description">{{ ev.description }}</div>
+						<div *ngIf="isAdmin" class="timeline-admin-btns">
+							<button (click)="enableEditTimeline(ev)">Edit</button>
+							<button (click)="deleteTimeline(ev._id)">Delete</button>
+						</div>
+					</div>
+				</div>
+			</ng-container>
+		</ng-container>
+	</div>
+</div>
