@@ -1,11 +1,11 @@
 import {
   BidiModule
-} from "./chunk-ZMDZBEQH.js";
-import "./chunk-XRH4B7RI.js";
+} from "./chunk-RIWZEPRS.js";
+import "./chunk-NWHDXER2.js";
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-I5QW7V2B.js";
+} from "./chunk-UFI2PV5L.js";
 import {
   APP_ID,
   ApplicationRef,
@@ -62,7 +62,7 @@ import {
   ɵɵelementStart,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-OIHWRDLJ.js";
+} from "./chunk-HN3TTB7C.js";
 
 // node_modules/@angular/cdk/fesm2022/fake-event-detection-DWOdFTFz.mjs
 function isFakeMousedownFromScreenReader(event) {

@@ -36,9 +36,29 @@ export class GalleryComponent {
       yearRange: '2022-23',
       description: 'Memories from intercollege competitions and awards.',
       photos: [
-        { src: 'assets/collage.jpg', alt: 'Sports collage 2022-23 - 1' },
-        { src: 'assets/collage.jpg', alt: 'Sports collage 2022-23 - 2' },
-        { src: 'assets/collage.jpg', alt: 'Sports collage 2022-23 - 3' }
+        { src: 'assets/gallery/2022/E1.jpg', alt: 'Sports collage 2022-23 - 1' },
+        { src: 'assets/gallery/2022/E2.jpg', alt: 'Sports collage 2022-23 - 2' },
+        { src: 'assets/gallery/2022/E3.jpg', alt: 'Sports collage 2022-23 - 3' },
+        { src: 'assets/gallery/2022/E4.jpg', alt: 'Sports collage 2022-23 - 4' },
+        { src: 'assets/gallery/2022/E5.jpg', alt: 'Sports collage 2022-23 - 5' },
+        { src: 'assets/gallery/2022/E6.jpg', alt: 'Sports collage 2022-23 - 6' },
+        { src: 'assets/gallery/2022/E7.jpg', alt: 'Sports collage 2022-23 - 7' },
+        { src: 'assets/gallery/2022/E8.jpg', alt: 'Sports collage 2022-23 - 8' },
+        { src: 'assets/gallery/2022/E9.jpg', alt: 'Sports collage 2022-23 - 9' },
+        { src: 'assets/gallery/2022/E10.jpg', alt: 'Sports collage 2022-23 - 10' },
+        { src: 'assets/gallery/2022/E11.jpg', alt: 'Sports collage 2022-23 - 11' },
+        { src: 'assets/gallery/2022/W1.jpg', alt: 'Sports collage 2022-23 - 12' },
+        { src: 'assets/gallery/2022/W2.jpg', alt: 'Sports collage 2022-23 - 13' },
+        { src: 'assets/gallery/2022/W3.jpg', alt: 'Sports collage 2022-23 - 14' },
+        { src: 'assets/gallery/2022/W4.jpg', alt: 'Sports collage 2022-23 - 15' },
+        { src: 'assets/gallery2022/W5.jpg', alt: 'Sports collage 2022-23 - 16' },
+        { src: 'assets/gallery/2022/W6.jpg', alt: 'Sports collage 2022-23 - 17' },
+        { src: 'assets/gallery/2022/W7.jpg', alt: 'Sports collage 2022-23 - 18' },
+        { src: 'assets/gallery/2022/W8.jpg', alt: 'Sports collage 2022-23 - 19' },
+        { src: 'assets/gallery/2022/W9.jpg', alt: 'Sports collage 2022-23 - 20' },
+        { src: 'assets/gallery/2022/W10.jpg', alt: 'Sports collage 2022-23 - 21' },
+        { src: 'assets/gallery/2022/W11.jpg', alt: 'Sports collage 2022-23 - 22' },
+        { src: 'assets/gallery/2022/W12.jpg', alt: 'Sports collage 2022-23 - 23' }
       ]
     }
   ];

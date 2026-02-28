@@ -16,14 +16,14 @@
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: 2px;
-  color: #af99fc;
+  color: #aa975e;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .college-logo {
-  height: 48px;
+  height:50px;
   border-radius: 8px;
-  background: #c41212;
+  background: #0a1224;
   padding: 2px;
 }
 
