@@ -1,0 +1,18 @@
+{
+  "routes": {
+    "/": {},
+    "/admin/news": {},
+    "/contact": {},
+    "/events": {},
+    "/gallery": {},
+    "/home": {},
+    "/sports": {},
+    "/sports/badminton": {},
+    "/sports/basketball": {},
+    "/sports/cricket": {},
+    "/sports/football": {},
+    "/sports/tennis": {},
+    "/sports/volleyball": {},
+    "/timeline": {}
+  }
+}

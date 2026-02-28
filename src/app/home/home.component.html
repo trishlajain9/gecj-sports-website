@@ -1,0 +1,69 @@
+
+
+
+<!-- 1st Scroll: Fullscreen Welcome Hero -->
+<section class="hero-section fullscreen-hero">
+	<div class="hero-bg"></div>
+	<div class="hero-overlay">
+		<h1 class="hero-title">SPORION 2026<br /></h1>
+		<div class="hero-subtitle">Where Passion Meets Performance</div>
+		<a routerLink="/sports" class="hero-btn">Explore Sports</a>
+	</div>
+</section>
+
+<!-- 2nd Scroll: Screenshot Section -->
+<section class="screenshot-section">
+	<div class="screenshot-content">
+		<div class="screenshot-text">
+			<h1 class="screenshot-main">About Sporion</h1>
+			<p class="screenshot-desc">
+				Sporion is the annual sports fest of our college that brings together passion, teamwork and competitive excellence.<br>
+				The name Sporion is derived from the words Sports and Orion. 
+				Orion, the Hunter constellation, symbolizes strength and determination. Its four prominent stars represent the core values of the event: Coordination, Unity, Discipline and Spirit. 
+				The event includes a wide range of sports such as cricket, basketball, volleyball, sprint, marathon, badminton, chess, carrom, tug of war, javelin throw, long jump, kabaddi, table tennis, football, shotput and kho-kho, encouraging active student participation. 
+				Each event highlights skill, strategy and true sportsmanship. Sporion is not just about winning trophies, but about the experiences, memories and bonds formed along the way.<br>
+				It instills discipline, time management, togetherness and unity, reminding us that growth and learning are the true victories of sports.
+			</p>
+		</div>
+		<div class="screenshot-image">
+			<img src="/assets/events/Winners.jpeg" alt="College sports team " />
+		</div>
+	</div>
+</section>
+
+<!-- 3rd Scroll: Legacy Section -->
+<section class="legacy-section">
+	<div class="legacy-content">
+		<div class="legacy-text">
+			<h1 class="legacy-title">A Legacy of Excellence and Spirit</h1>
+			<p class="legacy-desc">
+				For decades, College Sports Hub has built a proud legacy of athletic achievement, marked by numerous championships, record-breaking performances, and a strong sense of community. Our history is a testament to the dedication of our athletes, coaches, and loyal fans.
+			</p>
+			<p class="legacy-desc">
+				We celebrate our past while continually innovating for the future, striving to maintain our position at the forefront of collegiate athletics. Join us in continuing a tradition of competitive spirit and unwavering passion for sports.
+			</p>
+		</div>
+		<div class="legacy-image">
+			<img src="/assets/events/princi.jpg"alt="Principal Sir" />
+		</div>
+	</div>
+</section>
+
+<!-- 3rd Scroll: Keep existing sports/news -->
+
+
+<section class="news-section">
+		<h2 class="section-title">Latest News & Updates</h2>
+		<p class="section-desc">Stay informed with the latest happenings, results, and announcements from GECJ Sports.</p>
+		<div class="news-list">
+				<div class="news-card" *ngFor="let news of newsList; trackBy: trackByNews">
+						<img *ngIf="news.imageUrl" [src]="news.imageUrl" [alt]="'News: ' + news.title" class="news-img" />
+						<div class="news-content">
+								<h4>{{ news.title }}</h4>
+								<div class="news-date">{{ news.date }}</div>
+								<p>{{ news.desc }}</p>
+						</div>
+				</div>
+		</div>
+</section>
+

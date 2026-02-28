@@ -1,0 +1,118 @@
+/* Flex layout for navbar container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo area (GECJ + logo) */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.college-name {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #aa975e;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.college-logo {
+  height:50px;
+  border-radius: 8px;
+  background: #0a1224;
+  padding: 2px;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  gap: 18px;
+  margin: 0 32px;
+}
+
+/* Actions (search, user icon) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+
+/* Admin logo icon link */
+.admin-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.admin-logo:hover,
+.admin-logo:focus-visible {
+  background: rgba(0, 230, 255, 0.12);
+  border-color: #00e6ff;
+  outline: none;
+}
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(90deg, #0a1224 0%, #1b263b 100%);
+    padding: 20px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative; /* needed for absolute logo */
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+  .nav-links a {
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border: 2px solid #1976d2;
+    background: rgba(33, 150, 243, 0.10);
+    color: #fff;
+  }
