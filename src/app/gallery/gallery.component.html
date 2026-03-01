@@ -5,7 +5,7 @@
 
 <section class="batches">
   <div class="batch-card" *ngFor="let b of batches; trackBy: trackByBatch">
-    <button class="batch-header" (click)="toggleBatch(b.id)" [attr.aria-expanded]="activeBatchId === b.id">
+    <button type="button" class="batch-header" (click)="toggleBatch(b.id)" [attr.aria-expanded]="activeBatchId === b.id">
       <div class="left">
         <h3>{{ b.title }}</h3>
         <span class="year">{{ b.yearRange }}</span>
@@ -15,9 +15,21 @@
     <p class="desc" *ngIf="b.description">{{ b.description }}</p>
 
     <div class="photos" *ngIf="activeBatchId === b.id">
-      <div class="photo" *ngFor="let p of b.photos; trackBy: trackByPhoto">
-        <img [src]="p.src" [attr.alt]="p.alt" [attr.title]="p.alt" loading="lazy" />
+      <div class="photo" *ngFor="let p of b.photos; trackBy: trackByPhoto" (click)="openPhoto(p)" role="button" tabindex="0">
+        <!-- cSpell:disable -->
+        <img [src]="p.src" [alt]="p.alt" title="Gallery photo" loading="lazy" class="clickable" />
+        <!-- cSpell:enable -->
       </div>
     </div>
   </div>
 </section>
+
+<!-- Lightbox Modal -->
+<div *ngIf="selectedPhoto" class="lightbox-overlay" (click)="closePhoto()">
+  <div class="lightbox-wrapper" (click)="$event.stopPropagation()">
+    <button type="button" class="lightbox-close-btn" (click)="closePhoto()">✕</button>
+    <!-- cSpell:disable -->
+    <img class="lightbox-img" [src]="selectedPhoto.src" [alt]="selectedPhoto.alt" title="Gallery photo" />
+    <!-- cSpell:enable -->
+  </div>
+</div>
