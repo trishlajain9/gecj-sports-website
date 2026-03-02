@@ -16,8 +16,11 @@
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: 2px;
-  color: #aa975e;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  background: linear-gradient(90deg, #00f5ff 0%, #39e0ff 35%, #ffd36b 70%, #ff7b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 6px 22px rgba(0,230,255,0.09), 0 2px 8px rgba(0,0,0,0.18);
 }
 
 .college-logo {
