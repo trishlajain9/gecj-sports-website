@@ -26,7 +26,7 @@
 }
 
 .admin-login-card {
-	background: #232b3e;
+	background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
 	border-radius: 24px;
 	box-shadow: 0 8px 40px rgba(0,0,0,0.22);
 	padding: 2.8rem 2.5rem 2.2rem 2.5rem;
@@ -68,7 +68,7 @@
 	padding: 0.9rem 1.1rem;
 	border-radius: 12px;
 	border: 2px solid #232b3e;
-	background: #192132;
+	background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
 	color: #fff;
 	font-size: 1.08rem;
 	margin-bottom: 0.7rem;
@@ -82,7 +82,7 @@
 
 .admin-login-btn {
 	width: 100%;
-	background: linear-gradient(90deg, #ff6b6b, #ff4e50);
+	background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
 	color: #fff;
 	font-size: 1.2rem;
 	font-weight: 700;
