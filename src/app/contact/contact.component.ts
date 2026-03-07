@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { LightRaysComponent } from '../light-rays/light-rays.component';
 
 @Component({
 	selector: 'app-contact',
 		standalone: true,
-		imports: [CommonModule, RouterModule],
+		imports: [CommonModule, RouterModule, LightRaysComponent],
 	templateUrl: './contact.component.html',
 	styleUrls: ['./contact.component.css']
 })

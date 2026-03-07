@@ -1,9 +1,16 @@
 :root { --primary: #00e6ff; }
 
-.contact-hero { padding: 64px 16px 0; text-align: center; }
+.contact-page-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #07101f;
+  min-height: 100vh;
+}
+
+.contact-hero { position: relative; z-index: 1; padding: 64px 16px 0; text-align: center; }
 .contact-hero h1 { color: #22D3EE; font-size: 2rem; font-weight: 800; }
 
-.info-card { max-width: 1100px; margin: 12px auto; padding: 0 16px; }
+.info-card { position: relative; z-index: 1; max-width: 1100px; margin: 12px auto; padding: 0 16px; }
 .info-card .contact-info {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
