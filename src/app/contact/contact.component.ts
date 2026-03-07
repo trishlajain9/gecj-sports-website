@@ -20,31 +20,31 @@ export class ContactComponent {
 			phone: '8302186985',
 			instagram: 'https://www.instagram.com/rajveer____.01',
 			email: 'rajveerverma99830@gmail.com',
-			photo: 'assets/council-general-secretary.jpg'
+			photo: 'assets/organiser/rajveer.png'
 		},
 		{
 			role: 'Organiser',
 			name: 'Mohd. Kaif khan',
-			phone: '9992888093',
-			instagram: 'https://www.instagram.com/',
+			phone: '9001113142',
+			instagram: 'https://www.instagram.com/kaif_khan78610/',
 			email: '',
-			photo: 'assets/council/aryansh.jpg'
+			photo: 'assets/organiser/kaf.jpeg'
 		},
 		{
 			role: 'Organiser',
 			name: 'Tanishq Chaturvedi',
-			phone: '9727215454',
+			phone: '8829807765',
 			instagram: 'https://www.instagram.com/',
 			email: '',
-			photo: 'assets/council/akanksha.jpg'
+			photo: 'assets/organiser/tanishq.jpeg'
 		},
 		{
-			role: 'Organiser',
-			name: 'Yaman Singh',
-			phone: '9855221266',
-			instagram: 'https://www.instagram.com/',
+			role: 'Website Designer',
+			name: 'Trishla jain ',
+			phone: '9468859214',
+			instagram: 'https://www.instagram.com/trishla.jain__',
 			email: '',
-			photo: 'assets/council/yaman.jpg'
+			photo: 'assets/organiser/trishla.png'
 		},
 		{
 			role: 'Organiser',

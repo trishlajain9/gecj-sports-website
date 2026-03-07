@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/footer.component.css"],
-  "sourcesContent": [" .site-footer {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: flex-start;\r\n  background: linear-gradient(90deg, #0a1224 0%, #1b263b 100%);\r\n  color: #fff;\r\n  padding: 2rem 3rem 1.2rem 3rem;\r\n \r\n  font-size: 1rem;\r\n}\r\n.footer-left, .footer-right {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n .footer-left h4, .footer-right h4 {\r\n  margin-bottom: 0.7rem;\r\n  font-size: 1.1rem;\r\n  color: #dad2d2;\r\n}\r\n .site-footer a {\r\n  color: #22D3EE;\r\n  text-decoration: none;\r\n  transition: color 0.2s;\r\n  font-weight: 600;\r\n}\r\n .site-footer a:hover {\r\n  color: #1565c0;\r\n}\r\n@media (max-width: 700px) {\r\n  .site-footer {\r\n    flex-direction: column;\r\n    align-items: stretch;\r\n    padding: 1.2rem 1rem 0.7rem 1rem;\r\n    font-size: 0.95rem;\r\n  }\r\n  .footer-left, .footer-right {\r\n    margin-bottom: 1.2rem;\r\n  }\r\n}\r\n"],
-  "mappings": ";AAAC,CAAC;AACA,WAAS;AACT,mBAAiB;AACjB,eAAa;AACb;AAAA,IAAY;AAAA,MAAgB,KAAhB;AAAA,MAAuB,QAAQ,EAA/B;AAAA,MAAmC,QAAQ;AACvD,SAAO;AACP,WAAS,KAAK,KAAK,OAAO;AAE1B,aAAW;AACb;AACA,CAAC;AAAa,CAAC;AACb,WAAS;AACT,kBAAgB;AAClB;AACC,CAJA,YAIa;AAAI,CAJH,aAIiB;AAC9B,iBAAe;AACf,aAAW;AACX,SAAO;AACT;AACC,CAnBC,YAmBY;AACZ,SAAO;AACP,mBAAiB;AACjB,cAAY,MAAM;AAClB,eAAa;AACf;AACC,CAzBC,YAyBY,CAAC;AACb,SAAO;AACT;AACA,OAAO,CAAC,SAAS,EAAE;AACjB,GA7BA;AA8BE,oBAAgB;AAChB,iBAAa;AACb,aAAS,OAAO,KAAK,OAAO;AAC5B,eAAW;AACb;AACA,GAzBD;AAAA,EAyBe,CAzBD;AA0BX,mBAAe;AACjB;AACF;",
-  "names": []
-}

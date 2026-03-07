@@ -1,7 +1,7 @@
 
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
-  inlineCriticalCss: false,
+  inlineCriticalCss: true,
   baseHref: '/',
   locale: undefined,
   routes: [
@@ -13,117 +13,118 @@ export default {
   {
     "renderMode": 1,
     "preload": [
-      "chunk-DJT7AGCU.js",
-      "chunk-3534MA7H.js"
+      "chunk-3BMF7PRU.js",
+      "chunk-AH7KCEHW.js"
     ],
     "route": "/home"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-HTBNIJA7.js"
+      "chunk-N7S7JMGI.js"
     ],
     "route": "/sports"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/basketball"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/football"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/cricket"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/tennis"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/badminton"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/volleyball"
   },
   {
     "renderMode": 0,
     "preload": [
-      "chunk-GUG3TMRU.js"
+      "chunk-XISLKIBC.js"
     ],
     "route": "/sports/*"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-XIPMX65I.js"
+      "chunk-OCJIJ3B2.js"
     ],
     "route": "/events"
   },
   {
     "renderMode": 1,
     "preload": [
-      "chunk-XHUB74JU.js",
-      "chunk-3534MA7H.js"
+      "chunk-C62RFINL.js",
+      "chunk-AH7KCEHW.js"
     ],
     "route": "/timeline"
   },
   {
     "renderMode": 1,
     "preload": [
-      "chunk-WK7QZE3H.js"
+      "chunk-ONYFIWEK.js"
     ],
     "route": "/gallery"
   },
   {
     "renderMode": 1,
     "preload": [
-      "chunk-QJWPLIA7.js",
-      "chunk-3534MA7H.js"
+      "chunk-FLSKOYJ3.js",
+      "chunk-AH7KCEHW.js"
     ],
     "route": "/council"
   },
   {
     "renderMode": 1,
     "preload": [
-      "chunk-D4Q2BB4B.js",
-      "chunk-3534MA7H.js"
+      "chunk-3W6O2BPO.js",
+      "chunk-AH7KCEHW.js"
     ],
     "route": "/contact"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 925, hash: '78c18e8df9bdce5a61a498e47697485edca0ac5b24a330d17d5ac07308c9f8f9', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1465, hash: 'd3bb18007a7fcfc2740609085f7f146157d683fd70c363f5ab44531d29ff878c', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'sports/index.html': {size: 19877, hash: 'b77b10123d79e9823613a004e1744a725c31cc2a1ce7ddd1a5e0413eb52764d8', text: () => import('./assets-chunks/sports_index_html.mjs').then(m => m.default)},
-    'sports/basketball/index.html': {size: 13273, hash: '5485117e14cfa209190b036ac36e2ad6a7cf6e534e829d9dba92534a740756ac', text: () => import('./assets-chunks/sports_basketball_index_html.mjs').then(m => m.default)},
-    'sports/tennis/index.html': {size: 11142, hash: 'b4c86c55d80adbcf073ad43720917ce80d1631845e57b6f951d82670602736ef', text: () => import('./assets-chunks/sports_tennis_index_html.mjs').then(m => m.default)},
-    'sports/cricket/index.html': {size: 12072, hash: 'f945a654c6d60ec538943fa6446635ff62f9148d61db2649eeb598c23cba87c2', text: () => import('./assets-chunks/sports_cricket_index_html.mjs').then(m => m.default)},
-    'sports/badminton/index.html': {size: 12317, hash: 'e91080880ff92e96524ad88f300823760018a3cac09aa482443a76053faaf319', text: () => import('./assets-chunks/sports_badminton_index_html.mjs').then(m => m.default)},
-    'sports/volleyball/index.html': {size: 12087, hash: 'e35616c5676b81561ad23915de0329a7dbe8a554e285ebd87d633e8851eb660f', text: () => import('./assets-chunks/sports_volleyball_index_html.mjs').then(m => m.default)},
-    'events/index.html': {size: 9088, hash: 'ec6f50bbce6552cbd79b0146d56c8091bc1fbffbea879cda6c61d2e252373bd2', text: () => import('./assets-chunks/events_index_html.mjs').then(m => m.default)},
-    'sports/football/index.html': {size: 11142, hash: '2a29c1a26df7678e4da043e000394d2e417d3761e35050af53d9cb4141526e1d', text: () => import('./assets-chunks/sports_football_index_html.mjs').then(m => m.default)}
+    'index.csr.html': {size: 24392, hash: 'cce33119176f071137433aaa2f05aea39e56db37af14bf667afd765462793c1a', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17396, hash: '8370776ccafcb07123d19b3100f7a7c7eedc39bda71b89dd4fbe388ac5059f67', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'sports/basketball/index.html': {size: 35131, hash: 'c8980042ad8ef2bc34afe67ce9494d630ed38105f75bcbecfcf988b87c6452df', text: () => import('./assets-chunks/sports_basketball_index_html.mjs').then(m => m.default)},
+    'sports/index.html': {size: 40880, hash: '050bf6d68e00127784a20c596fbaef1f3f727c448fb440ede51f4f66689966e9', text: () => import('./assets-chunks/sports_index_html.mjs').then(m => m.default)},
+    'sports/cricket/index.html': {size: 33961, hash: 'ba732835c89ac9c60595c98ede9d8917a0255d549c3e6fff33ef47a6a3825727', text: () => import('./assets-chunks/sports_cricket_index_html.mjs').then(m => m.default)},
+    'sports/tennis/index.html': {size: 33164, hash: '0c85eefd31195a29a623bfd989bc79c058f2c3ba57c6ae9ea492cb31b52a72c4', text: () => import('./assets-chunks/sports_tennis_index_html.mjs').then(m => m.default)},
+    'sports/football/index.html': {size: 33164, hash: 'de9fcc658f62e7f9418dd9160e539aed375516ded7fb3fffda66a11a36cb49af', text: () => import('./assets-chunks/sports_football_index_html.mjs').then(m => m.default)},
+    'sports/badminton/index.html': {size: 34200, hash: '69a1957fa3eb438bdb0825c40f9e52c0c9aee589e5ba7490ebbf76a21a9aba93', text: () => import('./assets-chunks/sports_badminton_index_html.mjs').then(m => m.default)},
+    'sports/volleyball/index.html': {size: 33976, hash: 'cec3b4fd301a1e34fe1c4a11b37565c50f494ff8f08cb136debdc187b49af160', text: () => import('./assets-chunks/sports_volleyball_index_html.mjs').then(m => m.default)},
+    'events/index.html': {size: 31503, hash: 'fc5521e081966af8e1ca7234790cacdc9b8072aaf39634533c984eed1944ec47', text: () => import('./assets-chunks/events_index_html.mjs').then(m => m.default)},
+    'styles-IZ4JPS2A.css': {size: 8190, hash: 'Q8X8D1KuBpc', text: () => import('./assets-chunks/styles-IZ4JPS2A_css.mjs').then(m => m.default)}
   },
 };

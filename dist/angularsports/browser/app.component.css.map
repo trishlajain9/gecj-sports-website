@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/app.component.css"],
-  "sourcesContent": ["/* app.component.css */\r\n.college-img-container {\r\n  width: 100%;\r\n  text-align: center;\r\n  background-color: #f5f5f5; /* optional */\r\n}\r\n\r\n.college-img {\r\n  max-width: 100%;\r\n  height: auto;\r\n  display: block;\r\n  margin: 0 auto;\r\n}\r\n"],
-  "mappings": ";AACA,CAAC;AACC,SAAO;AACP,cAAY;AACZ,oBAAkB;AACpB;AAEA,CAAC;AACC,aAAW;AACX,UAAQ;AACR,WAAS;AACT,UAAQ,EAAE;AACZ;",
-  "names": []
-}
