@@ -19,7 +19,7 @@
 
 	<section class="council-cards-section" aria-label="Council Members">
 		<div class="council-cards-grid">
-			<div class="cc-card" *ngFor="let m of members">
+			<div class="cc-card" *ngFor="let m of members; let i = index">
 				<p class="cc-role">{{ m.role }}</p>
 				<div class="cc-avatar-wrap">
 					<img class="cc-avatar"

@@ -19,8 +19,17 @@ interface CouncilMember {
 	styleUrls: ['./council.component.css']
 })
 export class CouncilComponent {
+	zoomedIndex: number | null = null;
+
 	members: CouncilMember[] = [
 	];
+
+	onPhotoClick(index: number): void {
+		this.zoomedIndex = index;
+		setTimeout(() => {
+			this.zoomedIndex = null;
+		}, 2000);
+	}
 
 	onPhotoError(ev: Event): void {
 		const img = ev.target as HTMLImageElement;

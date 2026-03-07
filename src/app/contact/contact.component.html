@@ -28,11 +28,11 @@
 
 <section class="council-cards-section" *ngIf="showCouncil" aria-label="Council Members">
 	<div class="council-cards-grid">
-		<div class="cc-card" *ngFor="let m of councilMembers" tabindex="0" [attr.aria-label]="m.name + ' card'">
-			<div class="cc-card-inner">
-				<div class="cc-card-face cc-card-front">
-					<p class="council-card-role">{{ m.role }}</p>
-					<div class="council-card-avatar-wrap">
+			<div class="cc-card" *ngFor="let m of councilMembers; let i = index" tabindex="0" [attr.aria-label]="m.name + ' card'">
+				<div class="cc-card-inner">
+					<div class="cc-card-face cc-card-front">
+						<p class="council-card-role">{{ m.role }}</p>
+						<div class="council-card-avatar-wrap">
 						<img class="council-card-avatar"
 						     [src]="m.photo || 'assets/Logo/logo.png'"
 						     [alt]="m.name"

@@ -12,6 +12,7 @@ import { LightRaysComponent } from '../light-rays/light-rays.component';
 })
 export class ContactComponent {
 	showCouncil = false;
+	zoomedIndex: number | null = null;
 
 	councilMembers = [
 		{
@@ -24,11 +25,11 @@ export class ContactComponent {
 		},
 		{
 			role: 'Organiser',
-			name: 'Mohd. Kaif khan',
+			name: 'Mohd. Kaif Khan',
 			phone: '9001113142',
 			instagram: 'https://www.instagram.com/kaif_khan78610/',
 			email: '',
-			photo: 'assets/organiser/kaf.jpeg'
+			photo: 'assets/organiser/kaif .jpeg'
 		},
 		{
 			role: 'Organiser',
@@ -66,6 +67,13 @@ export class ContactComponent {
 
 	toggleCouncil(): void {
 		this.showCouncil = !this.showCouncil;
+	}
+
+	onPhotoClick(index: number): void {
+		this.zoomedIndex = index;
+		setTimeout(() => {
+			this.zoomedIndex = null;
+		}, 2000);
 	}
 
 	onPhotoError(ev: Event): void {
