@@ -81,7 +81,7 @@
 						<div class="news-content">
 								<h4>{{ news.title }}</h4>
 								<div class="news-date">{{ news.date }}</div>
-								<p>{{ news.desc }}</p>
+								<p [innerHTML]="news.desc"></p>
 						</div>
 				</div>
 		</div>

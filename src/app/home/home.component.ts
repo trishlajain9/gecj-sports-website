@@ -24,7 +24,7 @@ export class HomeComponent {
     {
       title: 'Annual Sports Event 2026 – Sporion',
       date: '9 March – 12 March 2026',
-      desc: 'Our college is hosting its Annual Sports Event from 9th March to 12th March 2026. The four-day event will feature various indoor and outdoor sports with participation from students across different departments. The event aims to promote physical fitness, teamwork, and the spirit of healthy competition among students. 📅 Event Dates: 9 March – 12 March 2026  📍 Venue: Engineering College Campus',
+      desc: 'Our college is hosting its Annual Sports Event from 9th March to 12th March 2026. The four-day event will feature various indoor and outdoor sports with participation from students across different departments. The event aims to promote physical fitness, teamwork, and the spirit of healthy competition among students. <br><br> 📅 Event Dates: 9 March – 12 March 2026 <br> 📍 Venue: Engineering College Campus',
     }
   ];
 
