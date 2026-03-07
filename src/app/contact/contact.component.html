@@ -3,43 +3,67 @@
 </section>
 
 <section class="cta-banner" aria-label="Discover the Council">
-	<a
-		class="cta-btn"
-		[routerLink]="['/council']"
-		href="/council"
-		(click)="goCouncil($event)"
-		aria-label="Discover the council"
-	>
-		DISCOVER THE COUNCIL
-	</a>
-
+	<div class="cta-flip" (click)="goCouncil($event)" [routerLink]="['/council']" role="link" tabindex="0"
+	     (keydown.enter)="goCouncil($event)" aria-label="Discover the council">
+		<div class="cta-flip-inner">
+			<div class="cta-front">DISCOVER THE COUNCIL</div>
+			<div class="cta-back">Meet the Sports Council &rarr;</div>
+		</div>
+	</div>
 </section>
 <section class="info-card">
 	<div class="contact-info">
-			<div class="card">
-				<div class="icon" aria-hidden="true">✉️</div>
-				<h3>Email Us</h3>
-				<p>
-					<a href="mailto:class.of.abhi&#64;gmail.com" aria-label="Email us">class.of.abhi&#64;gmail.com</a>
-				</p>
+
+		<!-- Email Us -->
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="icon" aria-hidden="true">✉️</div>
+					<h3>Email Us</h3>
+					<span class="flip-hint">Hover to see details</span>
+				</div>
+				<div class="flip-card-back">
+					<div class="icon" aria-hidden="true">✉️</div>
+					<h3>Email Us</h3>
+					<a href="mailto:abhishek11_soni&#64;yahoo.co.in" aria-label="Email us">abhishek11_soni&#64;yahoo.co.in</a>
+				</div>
 			</div>
-
-		<div class="card">
-			<div class="icon" aria-hidden="true">📞</div>
-			<h3>Call Us</h3>
-			<p>
-				<a href="tel:+919252519997" aria-label="Call us">+91 9252519997</a>
-			</p>
 		</div>
 
-		<div class="card">
-			<div class="icon" aria-hidden="true">📍</div>
-			<h3>Visit Us</h3>
-			<p>
-				<a href="https://www.google.com/maps/search/?api=1&query=Chandlai%2C%20Sunel%20Rd%2C%20Tehsil%2C%20Jhalrapatan%2C%20Rajasthan%20326023" target="_blank" rel="noopener" aria-label="Open address in Google Maps">
-					Chandlai, Sunel Rd, Tehsil, Jhalrapatan, Rajasthan 326023
-				</a>
-			</p>
+		<!-- Call Us -->
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="icon" aria-hidden="true">📞</div>
+					<h3>Call Us</h3>
+					<span class="flip-hint">Hover to see details</span>
+				</div>
+				<div class="flip-card-back">
+					<div class="icon" aria-hidden="true">📞</div>
+					<h3>Call Us</h3>
+					<a href="tel:+919252519997" aria-label="Call us">+91 9252519997</a>
+				</div>
+			</div>
 		</div>
+
+		<!-- Visit Us -->
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<div class="icon" aria-hidden="true">📍</div>
+					<h3>Visit Us</h3>
+					<span class="flip-hint">Hover to see details</span>
+				</div>
+				<div class="flip-card-back">
+					<div class="icon" aria-hidden="true">📍</div>
+					<h3>Visit Us</h3>
+					<a href="https://www.google.com/maps/search/?api=1&query=Chandlai%2C%20Sunel%20Rd%2C%20Tehsil%2C%20Jhalrapatan%2C%20Rajasthan%20326023"
+					   target="_blank" rel="noopener" aria-label="Open address in Google Maps">
+						Chandlai, Sunel Rd, Tehsil, Jhalrapatan, Rajasthan 326023
+					</a>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </section>

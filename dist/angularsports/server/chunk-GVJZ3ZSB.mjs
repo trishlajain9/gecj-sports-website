@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{a}from"./chunk-K7BIDWXN.mjs";import{K as e,P as n}from"./chunk-BXPM7473.mjs";var o=class r{constructor(t){this.http=t}apiUrl="/api/council-cards";list(){return this.http.get(this.apiUrl)}create(t){return this.http.post(this.apiUrl,t)}update(t,i){return this.http.put(`${this.apiUrl}/${t}`,i)}delete(t){return this.http.delete(`${this.apiUrl}/${t}`)}static \u0275fac=function(i){return new(i||r)(n(a))};static \u0275prov=e({token:r,factory:r.\u0275fac,providedIn:"root"})};export{o as a};

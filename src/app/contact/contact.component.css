@@ -6,28 +6,77 @@
 .info-card { max-width: 1100px; margin: 12px auto; padding: 0 16px; }
 .info-card .contact-info {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2.5rem 2rem;
 	justify-items: center;
 }
-.card {
-	background: #17213a;
-	border-radius: 24px;
-	box-shadow: 0 4px 32px rgba(0,188,212,0.13);
-	padding: 2.2rem 2rem 1.6rem 2rem;
-	min-width: 320px; max-width: 370px;
-	display: flex; flex-direction: column; align-items: center; text-align: center;
-	transition: box-shadow 0.2s, transform 0.2s; border: none;
+
+/* ── Flip Card Container ── */
+.flip-card {
+	width: 320px;
+	height: 240px;
+	perspective: 1000px;
+	cursor: pointer;
 }
-.card:hover { box-shadow: 0 8px 40px rgba(0,230,255,0.18); transform: translateY(-6px) scale(1.02); }
-.card .icon { font-size: 2.2rem; margin-bottom: 0.6rem; }
-.card h3 { margin: 0 0 0.5rem; color: #d6f6fa; font-size: 1.3rem; font-weight: 800; }
-.card p { margin: 0; color: #b2c2d6; }
-.card a { color: #7dd3fc; text-decoration: underline; }
-.card a:hover { color: #bae6fd; }
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+/* ── Shared face styles ── */
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	inset: 0;
+	border-radius: 22px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1.8rem;
+	text-align: center;
+	gap: 0.4rem;
+}
+
+/* ── Front Face ── */
+.flip-card-front {
+	background: #17213a;
+	border: 1.5px solid rgba(34,211,238,0.15);
+	box-shadow: 0 4px 32px rgba(0,188,212,0.13);
+}
+.flip-card-front .icon { font-size: 2.4rem; }
+.flip-card-front h3 { margin: 0.4rem 0 0.2rem; color: #d6f6fa; font-size: 1.35rem; font-weight: 800; }
+.flip-hint { color: #22D3EE; font-size: 0.88rem; opacity: 0.7; letter-spacing: 0.04em; }
+
+/* ── Back Face ── */
+.flip-card-back {
+	background: linear-gradient(135deg, #0e3a5c 0%, #17213a 60%, #0a2540 100%);
+	border: 1.5px solid rgba(34,211,238,0.35);
+	box-shadow: 0 8px 40px rgba(0,230,255,0.22);
+	transform: rotateY(180deg);
+}
+.flip-card-back .icon { font-size: 2rem; }
+.flip-card-back h3 { margin: 0.3rem 0 0.5rem; color: #22D3EE; font-size: 1.25rem; font-weight: 800; }
+.flip-card-back a {
+	color: #7dd3fc;
+	text-decoration: underline;
+	font-size: 1rem;
+	line-height: 1.5;
+	word-break: break-word;
+}
+.flip-card-back a:hover { color: #bae6fd; }
 
 @media (max-width: 900px) {
 	.info-card .contact-info { grid-template-columns: 1fr; gap: 1.5rem; }
+	.flip-card { width: min(320px, 90vw); height: 220px; }
 }
 
 /* CTA banner and button */
@@ -42,22 +91,58 @@
 	justify-content: center;
 }
 
-.cta-btn {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	font-weight: 800;
-	letter-spacing: 0.8px;
-	color: #fff;
-	padding: 12px 22px;
-	border-radius: 12px;
-	background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-	box-shadow: 0 10px 30px rgba(59,130,246,0.25);
-	transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+.cta-banner {
+	max-width: 1100px;
+	margin: 28px auto 48px;
+	padding: 18px;
+	border-radius: 18px;
+	background: linear-gradient(135deg, rgba(13,27,42,0.9), rgba(27,38,59,0.9));
+	box-shadow: 0 10px 40px rgba(0,0,0,0.25), inset 0 -20px 60px rgba(0,0,0,0.15);
+	display: flex;
+	justify-content: center;
 }
 
-.cta-btn:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 14px 36px rgba(59,130,246,0.35); }
-.cta-btn:active { transform: translateY(0); filter: brightness(0.98); box-shadow: 0 8px 24px rgba(59,130,246,0.25); }
+/* ── CTA Flip Button ── */
+.cta-flip {
+	width: 260px;
+	height: 52px;
+	perspective: 800px;
+	cursor: pointer;
+}
+.cta-flip-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.cta-flip:hover .cta-flip-inner {
+	transform: rotateX(180deg);
+}
+.cta-front,
+.cta-back {
+	position: absolute;
+	inset: 0;
+	border-radius: 12px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 800;
+	letter-spacing: 0.8px;
+	font-size: 0.95rem;
+	color: #fff;
+}
+.cta-front {
+	background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+	box-shadow: 0 10px 30px rgba(59,130,246,0.25);
+}
+.cta-back {
+	background: linear-gradient(90deg, #8b5cf6, #ec4899);
+	box-shadow: 0 10px 30px rgba(139,92,246,0.3);
+	transform: rotateX(180deg);
+}
 
 /* Council Modal */
 .council-modal-backdrop {

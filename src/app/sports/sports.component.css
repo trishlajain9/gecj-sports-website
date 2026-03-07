@@ -18,73 +18,183 @@
 }
 .sports-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2.5rem 2rem;
 	justify-items: center;
 }
-.sport-card {
-	background: #17213a;
-	border-radius: 24px;
-	box-shadow: 0 4px 32px rgba(0,188,212,0.13);
-	padding: 2.2rem 2.2rem 1.5rem 2.2rem;
-	min-width: 320px;
-	max-width: 370px;
+
+/* ── Flip Card Container ── */
+.flip-card {
+	width: 320px;
+	height: 340px;
+	perspective: 1000px;
+	cursor: pointer;
+}
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+/* ── Shared face styles ── */
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	inset: 0;
+	border-radius: 22px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	padding: 2rem 1.8rem;
 	text-align: center;
-	transition: box-shadow 0.2s, transform 0.2s;
-	border: none;
 }
-.sport-card:hover {
-	box-shadow: 0 8px 40px rgba(0,230,255,0.18);
-	transform: translateY(-8px) scale(1.03);
+
+/* ── Front Face ── */
+.flip-card-front {
+	background: #17213a;
+	border: 1.5px solid rgba(34,211,238,0.15);
+	box-shadow: 0 4px 32px rgba(0,188,212,0.13);
 }
-.sport-img {
-	width: 120px;
-	height: 90px;
+.flip-card-front .sport-img {
+	width: 130px;
+	height: 100px;
 	object-fit: cover;
-	border-radius: 14px;
+	border-radius: 16px;
 	margin-bottom: 1.2rem;
-	background: #fff;
+	box-shadow: 0 2px 16px rgba(0,230,255,0.18);
 }
-.sport-info h3 {
+.flip-card-front h3 {
 	color: #d6f6fa;
+	font-size: 1.5rem;
+	font-weight: 800;
+	margin-bottom: 0.5rem;
+}
+.flip-hint {
+	color: #22D3EE;
+	font-size: 0.88rem;
+	opacity: 0.7;
+	letter-spacing: 0.04em;
+}
+
+/* ── Back Face ── */
+.flip-card-back {
+	background: linear-gradient(135deg, #0e3a5c 0%, #17213a 60%, #0a2540 100%);
+	border: 1.5px solid rgba(34,211,238,0.35);
+	box-shadow: 0 8px 40px rgba(0,230,255,0.22);
+	transform: rotateY(180deg);
+	gap: 0.8rem;
+}
+.flip-card-back h3 {
+	color: #22D3EE;
 	font-size: 1.45rem;
 	font-weight: 800;
-	margin-bottom: 0.7rem;
+	margin-bottom: 0.3rem;
 }
-.sport-info p {
+.flip-card-back p {
 	color: #b2c2d6;
-	font-size: 1.08rem;
-	margin-bottom: 1.3rem;
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-bottom: 0.5rem;
 }
 .sport-btn {
 	display: inline-block;
 	background: #22D3EE;
-	color: #17213a;
+	color: #0a2540;
 	font-weight: 700;
-	font-size: 1.1rem;
-	border: none;
+	font-size: 1.05rem;
 	border-radius: 2rem;
-	padding: 0.6rem 2.2rem;
+	padding: 0.55rem 2rem;
 	text-decoration: none;
-	transition: background 0.2s, color 0.2s;
-	box-shadow: 0 2px 8px rgba(0,230,255,0.08);
+	box-shadow: 0 2px 12px rgba(0,230,255,0.25);
+	margin-top: 0.3rem;
+	/* Calypso animation setup */
+	overflow: hidden;
+	position: relative;
 }
-.sport-btn:hover {
-	background: #fff;
-	color: #00e6ff;
+
+.sport-btn span {
+	display: block;
+	position: relative;
+	z-index: 10;
 }
+
+.sport-btn:hover span {
+	animation: sportMoveScaleUpInitial 0.3s forwards, sportMoveScaleUpEnd 0.3s forwards 0.3s;
+}
+
+@keyframes sportMoveScaleUpInitial {
+	to {
+		transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+}
+
+@keyframes sportMoveScaleUpEnd {
+	from {
+		transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+.sport-btn::before {
+	content: '';
+	position: absolute;
+	background: #0a2540;
+	width: 120%;
+	height: 0;
+	padding-bottom: 120%;
+	top: -110%;
+	left: -10%;
+	border-radius: 50%;
+	transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+	z-index: 1;
+}
+
+.sport-btn:hover::before {
+	transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.sport-btn::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0a2540;
+	transform: translate3d(0, -100%, 0);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+	z-index: 2;
+}
+
+.sport-btn:hover::after {
+	transform: translate3d(0, 0, 0);
+	transition-duration: 0.05s;
+	transition-delay: 0.4s;
+	transition-timing-function: linear;
+}
+
 @media (max-width: 900px) {
 	.sports-grid {
 		grid-template-columns: 1fr;
 		gap: 1.5rem;
 	}
-	.sport-card {
-		min-width: 90vw;
-		max-width: 98vw;
-		padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+	.flip-card {
+		width: min(320px, 90vw);
+		height: 320px;
 	}
 }
 

@@ -2,14 +2,13 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { EventTimelinesService, EventTimeline } from '../services/event-timelines.service';
 
 @Component({
   selector: 'app-events-timeline',
   standalone: true,
-  imports: [CommonModule, MatCardModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './event-timelines.component.html',
   styleUrls: ['./event-timelines.component.css']
 })
@@ -18,8 +17,6 @@ export class EventsTimelineComponent implements OnInit {
   isAdmin = false;
   private isBrowser = false;
   newTimeline: EventTimeline = { title: '', date: '', description: '', imageUrl: '', time: '' };
-  editTimeline: EventTimeline = { title: '', date: '', description: '', imageUrl: '', time: '' };
-  editTimelineId: string | null = null;
 
   // Grouped view state
   groupedMap: Record<string, EventTimeline[]> = {};
@@ -69,27 +66,6 @@ export class EventsTimelineComponent implements OnInit {
   this.loadTimelines();
       }
     });
-  }
-
-  enableEditTimeline(timeline: EventTimeline) {
-    this.editTimelineId = timeline._id || null;
-    this.editTimeline = { ...timeline };
-  }
-
-  saveEditTimeline(id: string | undefined) {
-    if (!id) return;
-    this.eventTimelinesService.updateEventTimeline(id, this.editTimeline).subscribe({
-      next: () => {
-        this.editTimelineId = null;
-        this.editTimeline = { title: '', date: '', description: '', imageUrl: '' };
-  this.loadTimelines();
-      }
-    });
-  }
-
-  cancelEditTimeline() {
-    this.editTimelineId = null;
-    this.editTimeline = { title: '', date: '', description: '', imageUrl: '' };
   }
 
   deleteTimeline(id: string | undefined) {

@@ -65,11 +65,10 @@ export class GalleryComponent {
   }
 
   openPhoto(photo: Photo) {
-    console.log('openPhoto called', photo && photo.src);
     this.selectedPhoto = photo;
     try {
       document.body.style.overflow = 'hidden';
-    } catch (e) {
+    } catch {
       // ignore
     }
   }

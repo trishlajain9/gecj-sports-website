@@ -50,59 +50,73 @@ export class SportDetailComponent {
   private sports: Record<string, Sport> = {
     basketball: {
       name: 'Basketball',
-      img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80',
+      img: 'assets/sports/basketball/B1.jpeg',
       desc: 'Experience the thrill of basketball with world-class courts and strategic plays.',
       images: [
-        'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1518614183011-8aee3a67cc17?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=800&q=70'
+        'assets/sports/basketball/B1.jpeg',
+        'assets/sports/basketball/B2.jpeg',
+        'assets/sports/basketball/B3.jpeg',
+        'assets/sports/basketball/B4.jpg',
+        'assets/sports/basketball/B5.jpg',
+        'assets/sports/basketball/B7.jpg',
+        'assets/sports/basketball/B8.jpg',
+        'assets/sports/basketball/B10.jpg',
+        'assets/sports/basketball/B11.jpg',
+        'assets/sports/basketball/B12.jpg',
+        'assets/sports/basketball/B13.jpg',
+        'assets/sports/basketball/B14.jpg',
+        'assets/sports/basketball/B16.jpg'
       ]
     },
-    football: {
-      name: 'Football',
-      img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-      desc: 'Join our football squad, featuring top-notch facilities and renowned athletes.',
+    carrom: {
+      name: 'Carrom',
+      img: 'assets/sports/Carrom/C1.jpeg',
+      desc: 'Sharpen your precision and tactical thinking on the carrom board.',
       images: [
-        'https://images.unsplash.com/photo-1521417531039-96c94a58689d?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1508606572321-901ea443707f?auto=format&fit=crop&w=800&q=70'
+        'assets/sports/Carrom/C1.jpeg',
+        'assets/sports/Carrom/C2.jpg',
+        'assets/sports/Carrom/C3.jpg'
       ]
     },
     cricket: {
       name: 'Cricket',
-      img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80',
+      img: 'assets/sports/cricket/CR1.jpg',
       desc: 'Cricket at GECJ is all about learning, bonding, and fielding winning teams.',
       images: [
-        'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1542144612-1c7b03b42a1c?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1521417531039-96c94a58689d?auto=format&fit=crop&w=800&q=70'
+        'assets/sports/cricket/CR1.jpg',
+        'assets/sports/cricket/CR2.jpg',
+        'assets/sports/cricket/princi.jpg'
       ]
     },
-    tennis: {
-      name: 'Tennis',
-      img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80',
-      desc: 'Engage in intense rallies and showcase your skills on our tennis courts.',
+    chess: {
+      name: 'Chess',
+      img: 'assets/sports/Chess/CH1.jpg',
+      desc: 'Develop strategy, patience, and discipline with every chess match.',
       images: [
-        'https://images.unsplash.com/photo-1542144612-1c7b03b42a1c?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=70'
+        'assets/sports/Chess/CH1.jpg',
+        'assets/sports/Chess/CH2.jpg'
       ]
     },
     badminton: {
       name: 'Badminton',
-      img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80',
+      img: 'assets/sports/Badminton/ba1.jpg',
       desc: 'Crack smashes and perfect your aim in try by world-class badminton courts.',
       images: [
-        'https://images.unsplash.com/photo-1518614183011-8aee3a67cc17?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=800&q=70'
+        'assets/sports/Badminton/ba1.jpg',
+        'assets/sports/Badminton/ba2.jpg',
+        'assets/sports/Badminton/ba3.jpeg',
+        'assets/sports/Badminton/ba4.jpg',
+        'assets/sports/Badminton/ba5.jpg'
       ]
     },
     volleyball: {
       name: 'Volleyball',
-      img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80',
+      img: 'assets/sports/Volleyball/V1.jpg',
       desc: 'Work together to spike, block, and set your way to the national level.',
       images: [
-        'https://images.unsplash.com/photo-1508606572321-901ea443707f?auto=format&fit=crop&w=800&q=70',
-        'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=70'
+        'assets/sports/Volleyball/V1.jpg',
+        'assets/sports/Volleyball/V2.jpg',
+        'assets/sports/Volleyball/V3.jpg'
       ]
     }
   };

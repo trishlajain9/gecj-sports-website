@@ -1,1 +1,0 @@
-import{La as n,Za as o,_a as s,jb as a}from"./chunk-SAHNZ6FX.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-events"]],decls:2,vars:0,template:function(e,m){e&1&&(o(0,"h2"),a(1,"Events Page"),s())},encapsulation:2})};export{p as EventsComponent};

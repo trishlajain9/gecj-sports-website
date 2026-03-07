@@ -209,16 +209,6 @@ export class CouncilComponent {
     });
   }
 
-  filtered = computed(() => {
-    const q = this.q().trim().toLowerCase();
-    const role = this.role();
-    return this.items().filter(m => {
-      const hit = (!q || (m.name?.toLowerCase().includes(q) || m.role?.toLowerCase().includes(q)));
-      const byRole = (!role || m.role === role);
-      return hit && byRole;
-    });
-  });
-
   onSearch(ev: Event) { this.q.set((ev.target as HTMLInputElement).value || ''); }
   onRoleChange(ev: Event) { this.role.set((ev.target as HTMLSelectElement).value || ''); }
 

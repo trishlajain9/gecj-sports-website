@@ -39,7 +39,6 @@
 						<div class="event-title">{{ ev.title }}</div>
 						<div class="event-desc" *ngIf="ev.description">{{ ev.description }}</div>
 						<div *ngIf="isAdmin" class="timeline-admin-btns">
-							<button (click)="enableEditTimeline(ev)">Edit</button>
 							<button (click)="deleteTimeline(ev._id)">Delete</button>
 						</div>
 					</div>

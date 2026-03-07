@@ -3,12 +3,21 @@
 	<h2 class="section-title">Featured Sports</h2>
 	<p class="section-desc">Discover a wide range of sports activities and join the GECJ sports community.</p>
 	<div class="sports-grid">
-		<div class="sport-card" *ngFor="let sport of sports">
-			<img [src]="sport.img" [alt]="'Image of ' + sport.name" class="sport-img" />
-			<div class="sport-info">
-				<h3>{{ sport.name }}</h3>
-				<p>{{ sport.desc }}</p>
-				<a [routerLink]="['/sports', sport.name.toLowerCase()]" class="sport-btn">View Details</a>
+		<div class="flip-card" *ngFor="let sport of sports">
+			<div class="flip-card-inner">
+				<!-- Front Face -->
+				<div class="flip-card-front">
+					<img [src]="sport.img" [alt]="'Image of ' + sport.name" [title]="sport.name" class="sport-img" />
+					<h3>{{ sport.name }}</h3>
+					<span class="flip-hint">Hover to explore</span>
+				</div>
+				<!-- Back Face -->
+				<div class="flip-card-back">
+					<h3>{{ sport.name }}</h3>
+					<p>{{ sport.desc }}</p>
+					<a [routerLink]="['/sports', sport.name.toLowerCase()]" class="sport-btn"><span>View Details</span></a>
+					<!-- class="sport-btn"><span>View Details</span></a> -->
+				</div>
 			</div>
 		</div>
 	</div>
