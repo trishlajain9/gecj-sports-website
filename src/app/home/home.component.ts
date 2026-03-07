@@ -1,13 +1,12 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NewsService, NewsItem } from '../services/news.service';
-import { PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { NewsItem } from '../services/news.service';
+import { LightRaysComponent } from '../light-rays/light-rays.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, LightRaysComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -21,27 +20,14 @@ export class HomeComponent {
     { title: 'Volleyball', img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80', desc: 'Work together to spike, block, and set your way to the national level.' }
   ];
 
-  newsList: NewsItem[] = [];
-
-  private isBrowser = false;
-  constructor(private news: NewsService, @Inject(PLATFORM_ID) platformId: Object) {
-    this.isBrowser = isPlatformBrowser(platformId);
-  }
-
-  ngOnInit() {
-    if (this.isBrowser) {
-      this.news.list().subscribe({
-        next: (items) => this.newsList = items,
-        error: () => { this.newsList = []; }
-      });
+  newsList: NewsItem[] = [
+    {
+      title: 'Annual Sports Event 2026 – Sporion',
+      date: '9 March – 12 March 2026',
+      desc: 'Our college is hosting its Annual Sports Event from 9th March to 12th March 2026. The four-day event will feature various indoor and outdoor sports with participation from students across different departments. The event aims to promote physical fitness, teamwork, and the spirit of healthy competition among students. 📅 Event Dates: 9 March – 12 March 2026  📍 Venue: Engineering College Campus',
     }
-  }
+  ];
 
-  trackBySport(index: number, sport: any) {
-    return sport.title;
-  }
-
-  trackByNews(index: number, news: NewsItem) {
-    return news._id || news.title;
-  }
+  trackBySport(index: number, sport: any) { return sport.title; }
+  trackByNews(index: number, news: NewsItem) { return news._id || news.title; }
 }

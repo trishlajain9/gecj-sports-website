@@ -11,7 +11,5 @@ export const routes: Routes = [
 	{ path: 'gallery', loadComponent: () => import('./gallery/gallery.component').then(m => m.GalleryComponent) },
 	{ path: 'council', loadComponent: () => import('./council/council.component').then(m => m.CouncilComponent) },
 	{ path: 'contact', loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent) },
-	{ path: 'admin', loadComponent: () => import('./admin-panel/admin-panel.component').then(m => m.AdminComponent) },
-	{ path: 'admin/council', loadComponent: () => import('./admin-panel/council-admin.component').then(m => m.CouncilAdminComponent) },
-	{ path: 'admin/news', loadComponent: () => import('./admin-panel/news-admin.component').then(m => m.NewsAdminComponent) },
+
 ];

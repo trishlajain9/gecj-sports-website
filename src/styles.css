@@ -4,16 +4,10 @@
   color: #222;
 }
 
-/* Set consistent default background and text color */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 /* Global radial background for the whole site with fallback color */
 body {
   background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.8) 100%);
-  background-color: #0a1224; /* fallback for older browsers */
+  background-color: #0a1224;
   background-attachment: fixed;
   color: #fff;
 }
@@ -28,21 +22,44 @@ body {
 .navbar {
   background: linear-gradient(to right, #0d1b2a, #1b263b) !important;
 }
-/* You can add global styles to this file, and also import other style files */
 
-html, body {
-  height: 100%;
+/* ── Base reset ───────────────────────────────────────────── */
+html {
+  /* Lenis: html must NOT be overflow:hidden or height:100%  */
+  height: auto;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  /* Lenis needs body to grow naturally - never fix its height */
+  min-height: 100vh;
   margin: 0;
+  height: auto;
+  overflow-x: hidden;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
 }
 
-*, *::before, *::after { box-sizing: inherit; }
+/* Lenis helper classes (added automatically by Lenis) */
+html.lenis, html.lenis body {
+  height: auto;
+}
 
-/* Sticky footer layout */
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ── App shell ───────────────────────────────────────────── */
 :root { --navbar-height: 84px; }
+
 app-root {
   min-height: 100vh;
   display: flex;
@@ -50,9 +67,9 @@ app-root {
 }
 
 .main-content {
-  flex: 1 0 auto; /* grow to push footer down */
+  flex: 1 0 auto;
   display: block;
-  padding-top: var(--navbar-height); /* compensate for fixed navbar */
+  padding-top: var(--navbar-height);
 }
 
 app-navbar, app-footer, footer, .footer { flex: 0 0 auto; width: 100%; }

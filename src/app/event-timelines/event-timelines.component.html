@@ -1,5 +1,17 @@
 
 <div class="timeline-viewport">
+	<app-light-rays
+		[raysOrigin]="'top-center'"
+		[raysColor]="'#22d3ee'"
+		[raysSpeed]="0.8"
+		[lightSpread]="0.6"
+		[rayLength]="3"
+		[fadeDistance]="1.2"
+		[saturation]="0.9"
+		[followMouse]="true"
+		[mouseInfluence]="0.12"
+		[pulsating]="true">
+	</app-light-rays>
 	<h2 class="timeline-title">Events Timeline</h2>
 
 	<div *ngIf="isAdmin" class="timeline-admin-form">

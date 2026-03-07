@@ -4,11 +4,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EventTimelinesService, EventTimeline } from '../services/event-timelines.service';
+import { LightRaysComponent } from '../light-rays/light-rays.component';
 
 @Component({
   selector: 'app-events-timeline',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, LightRaysComponent],
   templateUrl: './event-timelines.component.html',
   styleUrls: ['./event-timelines.component.css']
 })
