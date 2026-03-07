@@ -25,9 +25,10 @@
   line-height: 1.15;
 }
 .legacy-desc {
-  font-size: 1.18rem;
-  color: #d9d0d0;
-  margin-bottom: 1.2rem;
+  color: #d6dce2;
+  font-size: 1.1rem;
+  margin-bottom: 2.2rem;
+  text-align: justify;
   line-height: 1.6;
 }
 .legacy-image {
@@ -174,7 +175,7 @@
   color: #fff;
 }
 .hero-title {
-   font-size: 5rem;
+   font-size: 4rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;

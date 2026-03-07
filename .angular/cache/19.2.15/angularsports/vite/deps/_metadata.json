@@ -1,55 +1,55 @@
 {
-  "hash": "447406ee",
-  "configHash": "77cfd6c1",
+  "hash": "992e7ae3",
+  "configHash": "06216a6d",
   "lockfileHash": "d8fc959f",
-  "browserHash": "ec7c6a77",
+  "browserHash": "e86c671d",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "fc050213",
+      "fileHash": "bf801996",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "b23ccde8",
+      "fileHash": "5ac5fa43",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "a424e01f",
+      "fileHash": "6801b179",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "8e0871ab",
+      "fileHash": "17ced5ac",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "329d35ae",
+      "fileHash": "4bfc0075",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "204d3114",
+      "fileHash": "e8426cd8",
       "needsInterop": false
     },
     "lenis": {
       "src": "../../../../../../node_modules/lenis/dist/lenis.mjs",
       "file": "lenis.js",
-      "fileHash": "25fb99be",
+      "fileHash": "f1d117e9",
       "needsInterop": false
     },
     "ogl": {
       "src": "../../../../../../node_modules/ogl/src/index.js",
       "file": "ogl.js",
-      "fileHash": "dc71517f",
+      "fileHash": "c6b1b525",
       "needsInterop": false
     }
   },
