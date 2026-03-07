@@ -16,11 +16,46 @@
 </section>
 
 <section class="cta-banner" aria-label="Discover the Council">
-	<div class="cta-flip" (click)="goCouncil($event)" [routerLink]="['/council']" role="link" tabindex="0"
-	     (keydown.enter)="goCouncil($event)" aria-label="Discover the council">
+	<div class="cta-flip" (click)="toggleCouncil()" role="button" tabindex="0"
+	     (keydown.enter)="toggleCouncil()" [class.open]="showCouncil"
+	     aria-label="Discover the council">
 		<div class="cta-flip-inner">
-			<div class="cta-front">DISCOVER THE COUNCIL</div>
-			<div class="cta-back">Meet the Sports Council &rarr;</div>
+			<div class="cta-front">{{ showCouncil ? 'CLOSE THE COUNCIL' : 'DISCOVER THE COUNCIL' }}</div>
+			<div class="cta-back">{{ showCouncil ? 'Click to Close' : 'Meet the Sports Council →' }}</div>
+		</div>
+	</div>
+</section>
+
+<section class="council-cards-section" *ngIf="showCouncil" aria-label="Council Members">
+	<div class="council-cards-grid">
+		<div class="cc-card" *ngFor="let m of councilMembers">
+			<p class="council-card-role">{{ m.role }}</p>
+			<div class="council-card-avatar-wrap">
+				<img class="council-card-avatar"
+				     [src]="m.photo || 'assets/Logo/logo.png'"
+				     [alt]="m.name"
+				     [title]="m.name"
+				     (error)="onPhotoError($event)" />
+			</div>
+			<h3 class="council-card-name">{{ m.name }}</h3>
+			<p class="council-card-phone" *ngIf="m.phone">Call: {{ m.phone }}</p>
+			<div class="council-card-socials">
+				<a *ngIf="m.instagram" [href]="m.instagram" target="_blank" rel="noopener"
+				   aria-label="Instagram" class="social-icon-btn">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+						<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+						<circle cx="12" cy="12" r="4"/>
+						<circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/>
+					</svg>
+				</a>
+				<a *ngIf="m.email" [href]="'mailto:' + m.email" target="_blank" rel="noopener"
+				   aria-label="Email" class="social-icon-btn">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+						<rect x="2" y="4" width="20" height="16" rx="2"/>
+						<polyline points="2,4 12,13 22,4"/>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
