@@ -34,7 +34,7 @@
 				<img class="council-card-avatar"
 				     [src]="m.photo || 'assets/Logo/logo.png'"
 				     [alt]="m.name"
-				     [title]="m.name"
+				     [attr.title]="m.name"
 				     (error)="onPhotoError($event)" />
 			</div>
 			<h3 class="council-card-name">{{ m.name }}</h3>

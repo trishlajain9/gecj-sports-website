@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;daa4bed96113374f61ff3ca30fa2b9fc1d6080012cf1fc65f7486c53abc79a90;C:/Users/rajve/Desktop/final/gecj-sports-website/src/app/light-rays/light-rays.component.ts"],
+  "sourcesContent": ["\n    :host { display: block; position: absolute; inset: 0; pointer-events: none; }\n    .light-rays-host { width: 100%; height: 100%; }\n  "],
+  "mappings": ";AACI;AAAQ,WAAS;AAAO,YAAU;AAAU,SAAO;AAAG,kBAAgB;AAAM;AAC5E,CAAC;AAAkB,SAAO;AAAM,UAAQ;AAAM;",
+  "names": []
+}

@@ -1,0 +1,53 @@
+<div class="council-page-wrap">
+	<app-light-rays
+		[raysOrigin]="'top-center'"
+		[raysColor]="'#22d3ee'"
+		[raysSpeed]="0.8"
+		[lightSpread]="0.6"
+		[rayLength]="3"
+		[fadeDistance]="1.2"
+		[saturation]="0.9"
+		[followMouse]="true"
+		[mouseInfluence]="0.12"
+		[pulsating]="true">
+	</app-light-rays>
+
+	<section class="council-hero">
+		<h1>Institute Sports Council</h1>
+		<p class="council-year">2025 – 2026</p>
+	</section>
+
+	<section class="council-cards-section" aria-label="Council Members">
+		<div class="council-cards-grid">
+			<div class="cc-card" *ngFor="let m of members">
+				<p class="cc-role">{{ m.role }}</p>
+				<div class="cc-avatar-wrap">
+					<img class="cc-avatar"
+					     [src]="m.photo || 'assets/Logo/logo.png'"
+					     [alt]="m.name"
+					     [attr.title]="m.name"
+					     (error)="onPhotoError($event)" />
+				</div>
+				<h3 class="cc-name">{{ m.name }}</h3>
+				<p class="cc-phone" *ngIf="m.phone">Call: {{ m.phone }}</p>
+				<div class="cc-socials">
+					<a *ngIf="m.instagram" [href]="m.instagram" target="_blank" rel="noopener"
+					   aria-label="Instagram" class="social-icon-btn">
+						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+							<circle cx="12" cy="12" r="4"/>
+							<circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"/>
+						</svg>
+					</a>
+					<a *ngIf="m.email" [href]="'mailto:' + m.email"
+					   aria-label="Email" class="social-icon-btn">
+						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="2" y="4" width="20" height="16" rx="2"/>
+							<polyline points="2,4 12,13 22,4"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

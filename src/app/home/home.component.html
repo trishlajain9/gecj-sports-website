@@ -79,7 +79,7 @@
 		<p class="section-desc">Stay informed with the latest happenings, results, and announcements from GECJ Sports.</p>
 		<div class="news-list">
 				<div class="news-card" *ngFor="let news of newsList; trackBy: trackByNews">
-						<img *ngIf="news.imageUrl" [src]="news.imageUrl" [alt]="'News: ' + news.title" class="news-img" />
+						<img *ngIf="news.imageUrl" [src]="news.imageUrl" [alt]="'News: ' + news.title" [attr.title]="news.title" class="news-img" />
 						<div class="news-content">
 								<h4>{{ news.title }}</h4>
 								<div class="news-date">{{ news.date }}</div>

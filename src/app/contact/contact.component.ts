@@ -15,7 +15,7 @@ export class ContactComponent {
 
 	councilMembers = [
 		{
-			role: 'General Secretary Sports Affairs',
+			role: 'Website Owner ',
 			name: 'Rajveer Verma',
 			phone: '8302186985',
 			instagram: 'https://www.instagram.com/rajveer____.01',
@@ -23,23 +23,23 @@ export class ContactComponent {
 			photo: 'assets/council-general-secretary.jpg'
 		},
 		{
-			role: 'Institute Sports Technical Head',
-			name: 'Aryansh Kukreja',
+			role: 'Organiser',
+			name: 'Mohd. Kaif khan',
 			phone: '9992888093',
 			instagram: 'https://www.instagram.com/',
 			email: '',
 			photo: 'assets/council/aryansh.jpg'
 		},
 		{
-			role: 'Institute Sports Creatives Head',
-			name: 'Akanksha Patel',
+			role: 'Organiser',
+			name: 'Tanishq Chaturvedi',
 			phone: '9727215454',
 			instagram: 'https://www.instagram.com/',
 			email: '',
 			photo: 'assets/council/akanksha.jpg'
 		},
 		{
-			role: 'Institute Sports Media Head',
+			role: 'Organiser',
 			name: 'Yaman Singh',
 			phone: '9855221266',
 			instagram: 'https://www.instagram.com/',
@@ -47,7 +47,7 @@ export class ContactComponent {
 			photo: 'assets/council/yaman.jpg'
 		},
 		{
-			role: 'Institute Sports Events Head',
+			role: 'Organiser',
 			name: 'TBA',
 			phone: '',
 			instagram: '',
@@ -55,7 +55,7 @@ export class ContactComponent {
 			photo: ''
 		},
 		{
-			role: 'Institute Sports Outreach Head',
+			role: 'Organiser',
 			name: 'TBA',
 			phone: '',
 			instagram: '',
